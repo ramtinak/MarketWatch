@@ -6,7 +6,7 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("Market Watch")]
-[assembly: AssemblyDescription("A tiny replacement app for Market watch [ Forex trading ]")]
+[assembly: AssemblyDescription("A tiny replacement app for Meta Trader's market watch")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Ramtinak@live.com")]
 [assembly: AssemblyProduct("MarketWatch By Ramtinak@live.com")]

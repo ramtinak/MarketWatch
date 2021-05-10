@@ -1,2 +1,6 @@
-# MarketWatch
-A tiny app for market watch
+## MarketWatch
+A tiny replacement app for Meta Trader's market watch
+
+### License: MIT
+
+### Developer: Ramtinak@live.com
