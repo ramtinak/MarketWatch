@@ -19,7 +19,7 @@ namespace MarketWatch
     {
         #region Fields
         readonly Timer Timer = new Timer();
-        readonly TimeZoneInfo Timezone = TimeZoneInfo.FindSystemTimeZoneById("Israel Standard Time");
+        readonly TimeZoneInfo Timezone = TimeZoneInfo.FindSystemTimeZoneById("FLE Standard Time");
         bool IsBlack = true;
         bool Clicked = false;
         #endregion Fields
@@ -31,7 +31,7 @@ namespace MarketWatch
             InitializeComponent();
             Load += FormLoad;
             FormClosing += FormFormClosing;
-            Timer.Interval = 100;
+            Timer.Interval = 1;
             Timer.Tick += TimerTick;
             CheckForIllegalCrossThreadCalls = false;
             MouseDown += FormMouseDown;
@@ -39,8 +39,8 @@ namespace MarketWatch
            
             StartPosition = FormStartPosition.Manual;
 
-            Location = new Point((Screen.PrimaryScreen.WorkingArea.Width / 2) - (Width / 2),
-                                   0);
+            Location = new Point((Screen.PrimaryScreen.WorkingArea.Width / 2) -
+                (Width / 2), 0);
         }
 
         #endregion Constructor

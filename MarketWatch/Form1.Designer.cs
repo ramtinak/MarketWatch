@@ -33,25 +33,25 @@ namespace MarketWatch
             this.XCancelButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // label1
+            // TimeLabel
             // 
             this.TimeLabel.AutoSize = true;
             this.TimeLabel.Font = new System.Drawing.Font("Consolas", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TimeLabel.ForeColor = System.Drawing.Color.White;
             this.TimeLabel.Location = new System.Drawing.Point(3, 7);
-            this.TimeLabel.Name = "label1";
+            this.TimeLabel.Name = "TimeLabel";
             this.TimeLabel.Size = new System.Drawing.Size(135, 33);
             this.TimeLabel.TabIndex = 0;
             this.TimeLabel.Text = "16:45:20";
             // 
-            // button1
+            // XCancelButton
             // 
             this.XCancelButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.XCancelButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.XCancelButton.Font = new System.Drawing.Font("Consolas", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.XCancelButton.ForeColor = System.Drawing.Color.Silver;
             this.XCancelButton.Location = new System.Drawing.Point(144, -5);
-            this.XCancelButton.Name = "button1";
+            this.XCancelButton.Name = "XCancelButton";
             this.XCancelButton.Size = new System.Drawing.Size(75, 56);
             this.XCancelButton.TabIndex = 1;
             this.XCancelButton.Text = "x";
@@ -73,6 +73,7 @@ namespace MarketWatch
             this.MinimizeBox = false;
             this.Name = "Form1";
             this.ShowIcon = false;
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "MarketWatch";
             this.TopMost = true;
