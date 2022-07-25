@@ -38,9 +38,9 @@ namespace MarketWatch
             this.TimeLabel.AutoSize = true;
             this.TimeLabel.Font = new System.Drawing.Font("Consolas", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TimeLabel.ForeColor = System.Drawing.Color.White;
-            this.TimeLabel.Location = new System.Drawing.Point(3, 7);
+            this.TimeLabel.Location = new System.Drawing.Point(3, -1);
             this.TimeLabel.Name = "TimeLabel";
-            this.TimeLabel.Size = new System.Drawing.Size(135, 33);
+            this.TimeLabel.Size = new System.Drawing.Size(161, 38);
             this.TimeLabel.TabIndex = 0;
             this.TimeLabel.Text = "16:45:20";
             // 
@@ -50,25 +50,27 @@ namespace MarketWatch
             this.XCancelButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.XCancelButton.Font = new System.Drawing.Font("Consolas", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.XCancelButton.ForeColor = System.Drawing.Color.Silver;
-            this.XCancelButton.Location = new System.Drawing.Point(144, -5);
+            this.XCancelButton.Location = new System.Drawing.Point(162, -18);
+            this.XCancelButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.XCancelButton.Name = "XCancelButton";
-            this.XCancelButton.Size = new System.Drawing.Size(75, 56);
+            this.XCancelButton.Size = new System.Drawing.Size(84, 70);
             this.XCancelButton.TabIndex = 1;
             this.XCancelButton.Text = "x";
             this.XCancelButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.XCancelButton.UseVisualStyleBackColor = true;
+            this.XCancelButton.UseVisualStyleBackColor = false;
             this.XCancelButton.Click += new System.EventHandler(this.XCancelButtonClick);
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(185, 46);
+            this.ClientSize = new System.Drawing.Size(208, 39);
             this.Controls.Add(this.XCancelButton);
             this.Controls.Add(this.TimeLabel);
             this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Form1";
