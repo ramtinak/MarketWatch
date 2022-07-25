@@ -53,7 +53,7 @@ namespace MarketWatch
             this.XCancelButton.Location = new System.Drawing.Point(162, -18);
             this.XCancelButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.XCancelButton.Name = "XCancelButton";
-            this.XCancelButton.Size = new System.Drawing.Size(84, 70);
+            this.XCancelButton.Size = new System.Drawing.Size(47, 70);
             this.XCancelButton.TabIndex = 1;
             this.XCancelButton.Text = "x";
             this.XCancelButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -65,7 +65,7 @@ namespace MarketWatch
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(208, 39);
+            this.ClientSize = new System.Drawing.Size(164, 39);
             this.Controls.Add(this.XCancelButton);
             this.Controls.Add(this.TimeLabel);
             this.ForeColor = System.Drawing.Color.White;

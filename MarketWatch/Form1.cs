@@ -25,8 +25,6 @@ namespace MarketWatch
         private bool Clicked = false;
         //private readonly Color White = Color.White;
         private readonly Color White = Color.FromArgb(255, 240, 240, 240);
-        private const int Black = -16777216;
-        private bool IsBlack = true;
         #endregion Fields
 
         #region Constructor
@@ -49,7 +47,7 @@ namespace MarketWatch
             StartPosition = FormStartPosition.Manual;
 
             Location = new Point((Screen.PrimaryScreen.WorkingArea.Width / 2) -
-                (Width / 2), 0);
+                ((Width) / 2), 0);
         }
 
         #endregion Constructor
@@ -59,7 +57,6 @@ namespace MarketWatch
         private void FormFormClosing(object sender, FormClosingEventArgs e)
         {
             Timer.Stop();
-            SaveState();
         }
 
         private void FormLoad(object sender, EventArgs e)
@@ -67,7 +64,7 @@ namespace MarketWatch
             TopMost = true;
             TopLevel = true;
             Timer.Start(); 
-            LoadState();
+            ChangeTheme();
             SyncTime();
         }
         private async void FormMouseDown(object sender, MouseEventArgs e)
@@ -81,7 +78,7 @@ namespace MarketWatch
                 // I created a double click option by myself
                 if (Clicked)
                 {
-                    ChangeTheme();
+                    XCancelButtonClick(XCancelButton, EventArgs.Empty);
                 }
                 Clicked = true;
                 await Task.Delay(150);
@@ -108,52 +105,11 @@ namespace MarketWatch
         }
         private void ChangeTheme()
         {
-            if (!IsBlack)
-            {
-                XCancelButton.BackColor = BackColor = Color.Black;
-                TimeLabel.ForeColor = White;
-                XCancelButton.ForeColor = Color.Silver;
-                IsBlack = true;
-            }
-            else
-            {
-                XCancelButton.BackColor = BackColor = White;
-                TimeLabel.ForeColor = Color.Black;
-                XCancelButton.ForeColor = Color.Black;
-                IsBlack = false;
-            }
+            XCancelButton.BackColor = BackColor = White;
+            TimeLabel.ForeColor = Color.Black;
+            XCancelButton.ForeColor = Color.Black;
         }
         #endregion Event handlers
-
-        #region Theme Save
-        static readonly string State = Path.Combine(Path.GetTempPath(), "MarketWatchStatX.dat");
-
-        private void LoadState()
-        {
-            if (File.Exists(State))
-            {
-                try
-                {
-                    var splitter = File.ReadAllText(State).Split(',');
-                    if (splitter.Length < 2) return;
-                    IsBlack = int.Parse(splitter[0]) == Black;
-                    XCancelButton.BackColor = BackColor = Color.FromArgb(int.Parse(splitter[0]));
-                    TimeLabel.ForeColor = Color.FromArgb(int.Parse(splitter[1]));
-                    XCancelButton.ForeColor = Color.FromArgb(int.Parse(splitter[2]));
-                }
-                catch (Exception){ }
-            }
-        }
-        private void SaveState()
-        {
-            try
-            {
-                var state = $"{BackColor.ToArgb()},{TimeLabel.ForeColor.ToArgb()},{XCancelButton.ForeColor.ToArgb()}";
-                File.WriteAllText(State, state);
-            }
-            catch (Exception) { }
-        }
-        #endregion Theme Save
 
         #region Run Module
         async void SyncTime()
